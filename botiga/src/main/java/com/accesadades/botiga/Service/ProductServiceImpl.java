@@ -19,6 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Set<Product> findAllProducts(String subcategory) {
+        // Implementar la lógica si es necesario
         return null;
     }
 
@@ -28,7 +29,19 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void increasePrice(Product product) {
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
 
+    @Override
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
+
+    @Override
+    public void increasePrice(Product product) {
+        // Implementar la lógica si es necesario
     }
 }
+
+}}
